@@ -1,0 +1,33 @@
+table{
+    width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: arial;
+    background-color:white 
+}
+tr{
+    border:1px solid black;
+    padding: 3px;
+    vertical-align: top
+}
+td{
+    border:1px solid black;
+    padding: 3px;
+    vertical-align: top
+}
+td.hi{width:70%}
+td#bi{width:30%}
+
+td.cri{width:35%}
+img{
+    width:100%}
+
+body{background-image:url(Images/Germany.png)}
+
+p.scroll {
+Background-color: lime;
+Width: 250px; height: 300px;
+Overflow: scroll;
+Padding-right:10px;
+Padding-left:10px;
+}

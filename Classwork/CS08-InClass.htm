@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+<style type="text/css">
+body{color: blue}
+form{background-color:grey; color: navy; padding-right:50px; padding-left:100px; padding-bottom:20px;padding-top:20px; margin-bottom:50px;margin-top:50px;font-family:arial}
+h1{text-align: center
+}
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<h1> Web Forms - CS08-InClass</h1>
+
+
+
+
+
+       <form method="post" action=mailto:stoda1@babson.edu enctype="type/plain">
+        
+    <p> Last Name 
+        <input type= "text" name="lname" placeholder="Last Name" maxlength="100" size="20"value="" />
+        First Name
+        <input type="text" name="fname" placeholder="First Name" maxlength="100" size="20" value="" />
+    </p>
+
+    <p> Gender:
+        Male <input type="radio" name="gender" value="male" />
+        Female <input type="radio" name="gender" value="female"/></p>
+
+    <p>My favorite Web Tech topics are:<br />
+<input type="checkbox" name="Q1" value="Basic HTML" />Basic HTML<br />
+<input type="checkbox" name="Q1" value="CSS" /> CSS<br />
+<input type="checkbox" name="Q1" value="Tables" /> Tables<br />
+<input type="checkbox" name="Q1" value="FORMS"/> FORMS <br /> </p>
+
+<p>How much do you like coding? (1=Hate it, 5=I Love It!)
+<select name="Rating">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select></p>
+
+
+
+
+<textarea name="comments" rows="6" cols="40">Write your comments here</textarea> 
+
+
+<br>
+<br>
+
+
+
+<button type="submit" name="Submit" value="Submit" >
+SUBMIT <img src="Images/mailbox.png" height="30"
+alt="submit_button" />
+
+</button>
+<button type="reset" value="Reset" name="Reset" >
+RESET <img src="Images/reset.png" height="30"
+alt="reset_button"/>
+
+</button>
+
+
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS11 - Intro to JavaScript</title>
+
+        <style type="text/css">
+            /*h1 {font-weight:bold; background-color: Silver;}
+	            p {text-align:center;}*/
+        </style>
+
+        <script type="text/javascript">
+            /* Your JavaScript goes here */
+            function change_BackgroundColor() {
+                var bgColors = new Array("green", "yellow", "blue", "pink", "red", "orange");
+                var n = bgColors.length;
+                var randIndex = Math.floor(Math.random() * n);
+                var b = document.getElementById("bodyA");
+                b.style.backgroundColor = bgColors[randIndex];
+            }
+
+            function enlarge_Img() {
+                var myimg = document.getElementById("imgB");
+                var w = myimg.style.width;
+                w = parseInt(w);
+                w = w + 30;
+                myimg.style.width = w + "px";
+            }
+
+            function c() {
+                alert("haha")
+            }
+            function button() {
+                var mycustomization = document.getElementById("font")
+                mycustomization.style.fontFamily = "Arial"
+                mycustomization.style.color = "royalblue"
+              
+            }
+            function capitalize(){
+                var myparagraph = document.getElementById("lmao")
+                myparagraph.style.fontSize = "50pt"
+                myparagraph.style.color = "red  "
+
+            }
+        
+            </script>
+        </head> 
+
+    <body id="bodyA">
+        <hr />
+        <h1 id="font" onclick="change_BackgroundColor()"> Don't Look - I am Changing</h1>
+        <hr />
+        <img id="imgB" src="images/man.png" alt="man" style="width:30px" onmouseover="enlarge_Img()" />
+        <p>
+            <button onclick="button()">I dare you to click on me!</button>
+        </p>
+        <hr />
+ 
+<p id="lmao" onclick="capitalize()"> Disclaimer: Don't mess with this paragraph. If anything changes, a virus will wipe all memory </p>
+
+
+
+
+    </body>
+
+</html>

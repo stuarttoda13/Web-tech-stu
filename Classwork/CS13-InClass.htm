@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS13-InClass</title>
+
+        <style type="text/css">
+            /* Your styles go here */
+
+            body {
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            function inflate_img(boo) {
+                var myimg = document.getElementById(boo);
+                var w = myimg.width;
+                w = parseInt(w);
+                w = w + 100;
+                myimg.style.width = w + "px";
+            }
+            function deflate_img(hi) {
+                var myimg = document.getElementById(hi);
+                var w = myimg.width;
+                w = parseInt(w);
+                w = w - 100;
+                myimg.style.width = w + "px";
+            }
+            
+              
+            //if you use style, you need to use parseInt
+
+
+
+
+        </script>
+    </head>
+
+    <body>
+
+        <h2> Manipulating Styles and Images </h2>
+
+        <p><img id="usa" src="images/usa.png" alt="Image goes here" title="map of USA" width="400px" onmouseover="inflate_img(this.id)" onmouseout="deflate_img(this.id)"/>
+        
+          <hr>
+
+        <img id="me" src="images/Germany.png" alt= "Germany Flag" title="Germany Flag" width="400px" onmouseover="inflate_img(this.id)" onmouseout="deflate_img(this.id)"/>
+        
+        
+         </p>
+
+      
+
+    </body>
+
+</html>

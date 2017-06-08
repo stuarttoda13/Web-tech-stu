@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+
+
+ <script type="text/javascript">
+
+        function changecolor(){
+                var mycustomization = document.getElementById("bcolor")
+                mycustomization.style.backgroundColor = "red"
+        }
+        function doubletaprootbeer() {
+                var codzombies = document.getElementById("anuthacola")
+                codzombies.style.backgroundColor = "blue"
+        }
+        function calculate(){
+            var year = 2017
+            //year = year + 1
+            document.getElementById("x").innerHTML = year; 
+            var month = "June"
+            document.getElementById("y").innerHTML = month;
+
+            //alert("This class is fun! This year is "+ year+".")
+
+            
+           
+            document.getElementById("z").innerHTML = year%10;
+        }
+       
+
+
+ </script>
+        <Title> Web Technologies - Javascript demo</Title>
+
+
+</head>
+
+<body>
+
+        <h1 id="bcolor" onclick="changecolor()">My First Title (Click me!)</h1>
+
+        <h1 id="anuthacola" onclick="doubletaprootbeer()" ondblclick="changecolor()"> Another title</h1>
+
+        <p> x = <span id="x">?</span> </p>
+        <p> y = <span id="y">?</span> </p>
+        <p> The last digit of this year is <span id="z">?</span></p>
+
+        <button onclick="calculate()">Click me! </button>
+
+
+        
+        
+</body>
+
+</html>

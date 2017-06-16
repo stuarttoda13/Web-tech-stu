@@ -35,12 +35,12 @@ function compute(){
     if (c == "" && f == ""){
         alert("Fill In One of the Boxes!");
     }
-    else if(c==""){
+    else if(c!=""){
         if (isNaN(c)){
-            alert("You should not enter a number!")
+            alert("You should enter a number!")
         }
-        else{
-            c =parseFloat(c);
+        else {
+            c = parseFloat(c);
             f = c * 9/5 +32;
             f = f.toFixed(1);
             s.far.value = f;
@@ -51,9 +51,9 @@ function compute(){
             alert("You Should enter a number!");
 
         }
-        else{
+    else{
             f = parseFloat(f);
-            c = (f-32) * 5/9
+            c = (f-32) * 5/9;
             c = c.toFixed(1);
             s.cel.value = c;
 

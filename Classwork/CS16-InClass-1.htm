@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS16-Processing Form Inputs</title>
+    <style type="text/css">
+        form {
+            margin-left: 200px;
+            margin-right: 200px;
+            padding: 30px;
+            font-family: Arial;
+            font-weight: bold;
+            background-color: Silver;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial Baltic;
+        }
+    </style>
+    <script>
+        function processInput() {
+            var f = document.getElementById("form1");
+            var n = f.name.value;
+            var a = f.age.value;
+            var g = f.gender.value;
+
+            if (n == "" || a == "") {
+                alert("You Did Not Finish the Form yet!")
+            }
+            else if (isNaN(a)) {
+                alert("You Should Enter A Number In Age!")
+            }
+            else {
+                f.result.value = "Name: " + n + "\nAge: " + a + "\nGender " + g;
+            }
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+
+    <h1>Processing form inputs</h1>
+    <form id="form1" action="" method="post">
+        <p>
+            Enter your name: <input type="text" name="name" size="40" /> Enter your age : <input type="text" name="age" size="4"
+            />
+        </p>
+        <p>
+            Select your gender:
+            <select name="gender">
+                    <option value="Female"> Female </option>
+                    <option value="Male"> Male </option>
+                </select>
+        </p>
+        <p>
+            Your selections will appear here: <br />
+            <textarea name="result" cols="40" rows="3"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+            <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
+            <button onclick="return processInput()"> Show me what you got</button>
+        </p>
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+ 
+   <head>
+       <title>Homework 3</title>
+       <style type="text/css">
+           h1 {
+               text-align: center;
+               font-family: Arial;
+               color: Navy;
+           }
+           img {
+               border: 6px solid navy;
+               margin-bottom: 100px;
+           }
+           p.cent {
+               text-align: center;
+           }
+           ul,
+           p#inst {
+               margin-right: 200px;
+               margin-left: 200px;
+               font-family: Cursive;
+               font-size: 1em;
+           }
+           li {
+               margin-top: 10px;
+               margin-bottom: 10px;
+           }
+           button {
+               margin-right: 20px;
+               background-color: White;
+               height: 50px;
+               width: 140px;
+           }
+       </style>
+       <script type="text/javascript">
+       function show(animalID){
+           var shepherd=document.getElementById("bshepherd");
+           var penguin=document.getElementById("bpenguin");
+           var snowLeopard=document.getElementById("bsnowleopard");
+           var lynx=document.getElementById("blynx");
+           var pic=document.getElementById("picture");
+           var animalname=document.getElementById("name");
+           var w=pic.style.width;
+ 
+          
+ 
+           if(animalID=="bshepherd"){           
+           pic.src="images/shepherd.jpg";
+           animalname.innerHTML="Shepherd";
+           pic.style.borderColor="yellow";
+           shepherd.style.backgroundColor="silver";
+           penguin.style.backgroundColor="white";
+           snowLeopard.style.backgroundColor="white";
+           lynx.style.backgroundColor="white";
+           pic.onmouseenter
+ 
+ 
+ 
+          
+           }
+           else if (animalID=="bpenguin"){
+           pic.src="images/penguin.jpg";
+           animalname.innerHTML="Penguin";
+           pic.style.borderColor="red";
+           penguin.style.backgroundColor="silver";
+           shepherd.style.backgroundColor="white";
+           snowLeopard.style.backgroundColor="white";
+           lynx.style.backgroundColor="white";
+ 
+           }
+           else if (animalID=="bsnowleopard"){
+           pic.src="images/snowleopard.jpg";
+           animalname.innerHTML="Snow Leopard";
+           pic.style.borderColor="green";
+           snowLeopard.style.backgroundColor="silver";
+           penguin.style.backgroundColor="white";
+           shepherd.style.backgroundColor="white";
+           lynx.style.backgroundColor="white";
+ 
+           }
+           else if (animalID=="blynx"){
+           pic.src="images/lynx.jpg";
+           animalname.innerHTML="Lynx";
+           pic.style.borderColor="purple";
+           lynx.style.backgroundColor="silver";
+           penguin.style.backgroundColor="white";
+           snowLeopard.style.backgroundColor="white";
+           shepherd.style.backgroundColor="white";
+ 
+           }
+ 
+           else if (animalID=="picture"){
+               w = parseInt(w);
+               w = w*1.75;
+               pic.style.width = w+ "px";
+           }
+ 
+           else{              
+               w = parseInt(w);
+               w = w*(1/1.75);
+               pic.style.width = w+ "px";
+           }
+              
+       }
+ 
+       </script>
+   </head>
+ 
+   <body>
+       <h1 id="name"> The Animal Name Goes Here</h1>
+       <p class="cent">
+           <img src="" alt="Image Goes Here" title="Animal Name" id="picture" style="width:300px" onmouseout="show()" onmouseover="show(this.id)"/>
+       </p>
+       <p class="cent">
+           <button id="bshepherd" onclick="show(this.id)">German Shepherd</button>
+           <button id="bpenguin" onclick="show(this.id)">Penguin</button>
+           <button id="bsnowleopard" onclick="show(this.id)">Snow Leopard</button>
+           <button id="blynx" onclick="show(this.id)">Lynx</button>
+       </p>
+       <p id="inst">The homework is graded out of 25 points. Please create the functionality, using JavaScript, to do the following:</p>
+       <ul>
+           <li> Display the image of the animal corresponding to the button the user clicks on. The place-holder for the image
+               is provided to you. (8 points).</li>
+           <li> Change the color of the image border based on the animal displayed. Yellow for German Shepherd, Red for Penguin,Green
+               for Snow Leopard and, Lime for Lynx. If my color choices are poor, you can pick your own colors as long as
+               it is different and unique for each animal image.(4 points)</li>
+           <li> Change the heading, "The Animal Name Goes Here" to the type of animal shown. (3 points)</li>
+           <li> Change the background color of the button that the user clicks on to Silver. Only the button the user has clicked
+               on must be Silver. All others must be White.(5 points)</li>
+           <li> Please use a single function for all of the above functionality (5 points). If you cannot, please use as many
+               functions as needed (0 points)</li>
+       </ul>
+ 
+ 
+   </body>
+ 
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Practice Problem - 1</title>
+
+        <style type="text/css">
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-family: Arial;
+                color: Navy;
+            }
+
+            p {
+                width: 60%;
+                font-family: Arial;
+                color: Navy;
+                text-align: justify;
+                padding-left: 200px;
+                font-size: large
+            }
+
+            .border {
+                border: 5px solid blue;
+                margin-left: 150px;
+            }
+        </style>
+
+        <script type="text/javascript">
+      //  function clickp1(){
+       // var colorchange = document.getElementById("first");
+        //var anotherchange = document.getElementById("second");
+       // var fullparagraph = document.getElementById("p3")
+       // var word = document.getElementById("change").innerHTML="Go Paragraph 1";
+        //colorchange.style.backgroundColor = "yellow";
+        //anotherchange.style.backgroundColor = "lime";
+        //colorchange.style.borderColor = "red";
+        //anotherchange.style.borderColor = "blue";
+        //}
+
+         //function clickp2(){
+         //var colorchange = document.getElementById("first");
+        //var anotherchange = document.getElementById("second");
+        //var word = document.getElementById("change").innerHTML="Go Paragraph 2";
+        //colorchange.style.backgroundColor = "lime";
+        //anotherchange.style.backgroundColor = "yellow";
+        //colorchange.style.borderColor = "blue";
+        //anotherchange.style.borderColor = "red";
+        //}
+        function change(paraID) {
+            var h = document.getElementById("head");
+            var p1 = document.getElementById("first");
+            var p2 = document.getElementById("second");
+            if (paraID == "first") {
+                h.innerHTML="Go Paragraph 1";
+                p1.style.backgroundColor = "yellow";
+                p2.style.backgroundColor = "lime";
+                p1.style.borderColor = "red";
+                p2.style.borderColor = "blue";
+            }
+            else if(paraID=="second") {
+                h.innerHTML="Go Paragraph 2";
+                p1.style.backgroundColor = "lime";
+                p2.style.backgroundColor = "yellow";
+                p1.style.borderColor = "blue";
+                p2.style.borderColor = "red";
+            }
+            else{
+                p1.style.backgroundColor = "maroon";
+                p1.style.borderColor = "black";
+                p2.style.backgroundColor = "blue";
+                p2.style.backgroundColor = "gold"
+
+            }
+
+        }
+    </script>
+    </head>
+
+    <body>
+        <h1>Practice Problem - CS15-InClass1</h1>
+        <hr>
+        <p>Please create the functionality to do the following: (a) When you click the first paragraph below, the background
+            color of the first paragraph must change to yellow and that of the second paragraph must change to lime. The
+            heading must be changed to "Go Paragraph 1". When you click the second paragraph, the background color of the
+            second paragraph must be yellow and that of the first must be lime. The heading must be changed to "Go Paragraph
+            2".</p>
+
+        <hr>
+        <h2>Paint the Paragraph</h2>
+        <h3 onclick="change(this.id)" id="head">This is the heading that should change</h3>
+        <p onclick="change(this.id)" id="first" class="border">
+            This is paragraph 1
+        </p>
+        <p></p>
+        <p onclick="change(this.id)" id="second" class="border">
+            This is paragraph 2
+        </p>
+
+
+    </body>
+
+</html>

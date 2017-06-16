@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS16 - Practice</title>
+
+<script type="text/javascript">
+function practice(paraID){
+var problem = document.getElementById("heading");
+//or you can do problem.innerHTML = problem.document.getElementbyId("heading")
+if (paraID == "first"){
+problem.style.color = "navy"; 
+problem.style.fontFamily = "lucida handwriting";
+problem.innerHTML = "Practice Problem";
+}
+
+else if(paraID == "second"){
+problem.style.color = "red";
+problem.style.fontFamily = "Arial";
+problem.innerHTML = "Boring Stuff";
+}
+else{
+    problem.style.color = "olive";
+    problem.style.fontFamily = "cursive";
+    problem.innerHTML = "Don't know what I am doing";
+}
+}
+</script>
+    </head>
+
+    <body>
+        <h1 onclick="practice(this.id)" id="heading"> Change the Heading</h1>
+
+        <h3 onclick="practice(this.id)" id="first"> a. Practice Problem</h3>
+        <h3 onclick="practice(this.id)" id="second"> b. Boring Stuff</h3>
+        <h3 onclick="practice(this.id)" id="third"> c. Don't know what I am doing</h3>
+
+        <p> When the user clicks on any one of the choices above, please change the title to the statement corresponding to that choice. For choice (a) set the font color to navy and the font to Lucida Handwriting. For (b), red and Arial and for (c) Olive and Cursive.
+        </p>
+    </body>
+
+</html>

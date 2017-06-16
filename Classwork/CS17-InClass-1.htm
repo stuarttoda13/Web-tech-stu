@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS17-InClass1</title>
+        <style type="text/css">
+            form {
+                background-color: Silver;
+                font-family: Arial;
+                color: Navy;
+                padding: 30px 50px 30px 100px;
+                margin-right: 150px;
+                margin-left: 150px;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: Cursive;
+                color: Black;
+            }
+        </style>
+    <script>
+        function process(){
+            var f =document.getElementById("form1")
+            var i;
+            var colorChoice;
+
+          /*  for(i=0;i<f.colors.length; i++){
+                if(f.color[i],checked){
+                    colorChoice = f.colors[i],value;
+                }
+            }*/
+
+f.style.backgroundColor = colorChoice;
+
+return false
+        }
+    </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <form id="form1" action="" method="post">
+            <h2>Processing Radio Button and Check Box</h2>
+            <p>
+                Please select a background color for the page:
+            </p>
+            <p>
+                Green: <input type="radio" name="colors" value="green" /> Yellow: <input type="radio" name="colors" value="yellow"
+                /> Lime: <input type="radio" name="colors" value="lime" /> Aqua: <input type="radio" name="colors" value="aqua"
+                />
+            </p>
+            <p>
+                Please select your favorite magazines: <br />
+                <input type="checkbox" name="mags" value="Sports Illustrated" />Sports Illustrated<br />
+                <input type="checkbox" name="mags" value="Wired" />Wired <br />
+                <input type="checkbox" name="mags" value="National Geographic" />National Geographic<br />
+                <input type="checkbox" name="mags" value="WSJ" />WSJ
+            </p>
+            <p>
+                <textarea name="result" cols="40" rows="4"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Go!" onclick="return process()" />
+                <input type="reset" name="Reset" value="Clear!" />
+            </p>
+
+        </form>
+
+
+    </body>
+
+</html>

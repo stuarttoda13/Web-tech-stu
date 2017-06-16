@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>CS16-InClass2 - Temperature Converter</title>
+        <style type="text/css">
+            form {
+                font-family: Arial;
+                font-weight: bold;
+                padding: 60px;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: Silver;
+            }
+
+            h1 {
+                font-family: Arial;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            p#p1 {
+                margin-bottom: 40px;
+            }
+        </style>
+        
+        <script>
+function compute(){
+    var s = document.getElementById("form1");
+    var c = s.cel.value;
+    var f = s.far.value;
+    
+    if (c == "" && f == ""){
+        alert("Fill In One of the Boxes!");
+    }
+    else if(c==""){
+        if (isNaN(c)){
+            alert("You should not enter a number!")
+        }
+        else{
+            c =parseFloat(c);
+            f = c * 9/5 +32;
+            f = f.toFixed(1);
+            s.far.value = f;
+        }
+    }
+    else{
+        if (isNaN(f)){
+            alert("You Should enter a number!");
+
+        }
+        else{
+            f = parseFloat(f);
+            c = (f-32) * 5/9
+            c = c.toFixed(1);
+            s.cel.value = c;
+
+        }
+
+    }
+    
+    
+   
+return false;
+
+}
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1> Celsius Fahrenheit Converter</h1>
+        <form id="form1" action="" method="post">
+            <p id="p1">
+                Celsius: <input type="text" name="cel" size="10" /> Fahrenheit: <input type="text" name="far" size="10" />
+            </p>
+            
+            <p style="margin-left:100px">
+                <input onclick="return compute()" type="Convert" name="Convert" value="Convert" style="width:80px; height:40px;" />
+                <input type="Convert" name="Clear" value="Clear" style="width:80px; height:40px;" />
+            </p>
+        </form>
+
+
+    </body>
+
+</html>

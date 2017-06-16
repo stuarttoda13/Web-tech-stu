@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework #4</title>
+
+        <style type="text/css">
+            h1 {
+                color: navy;
+                font-family: Arial;
+            }
+
+            p#out {
+                font-family: Cursive;
+                color: Navy;
+                margin-right: 300px;
+            }
+
+            form {
+                padding-left: 50px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                background-color: Silver;
+                font-family: Cursive;
+                color: Navy;
+                width: 60%;
+            }
+
+            p#hc {
+                font-family: Arial;
+                color: Red;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            body {
+                padding-left: 100px;
+            }
+
+            span {
+                color: Lime;
+            }
+        </style>
+        <script type="text/javascript">
+function makeSentence(){
+var f1 = document.getElementById("form1");
+var w1 = f1.word1.value;
+var w2 = f1.word2.value;
+var w3 = f1.word3.value;
+var sentence = w1 + w2 +w3;
+
+
+
+if (w1 == "" || w2 == "" || w3 == ""){
+    alert("Please select a valid word!");
+}
+else {
+    f1.results.value = sentence ;
+}
+return false;
+}
+
+
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <h1> Homework #4 - Make your own sentence</h1>
+        <p id="out">
+            Write a function that displays the sentence (consisting of 3 words) that the user creates by selecting one word from each
+            of the three drop-down menus. The sentence must be displayed only when the user picks the third word. No additional
+            words are required. Validate the function by ensuring that the user selects one valid word from each - if not,
+            provide an alert to the user indicating that the user must select a valid word. Nothing should be displayed if
+            the user has not picked one from each list of words.
+            <br /><br />
+            <span>Due: 11:59pm on Monday, 6/19, 2017.</span>
+
+        </p>
+        <form id="form1" action="">
+            <p>
+                The sentence is: <br /><textarea name="results" cols="40" rows="2"></textarea>
+            </p>
+            <p>
+                <select name="word1">
+				<option selected  value="">Select Word 1</option>
+				<option value="I">I</option>
+				<option value="We">We</option>
+				<option value="They">They</option>
+			</select>
+            </p>
+            <p>
+                <select name="word2">
+				<option selected value="">Select Word 2</option>
+				<option value=" will"> will</option>
+				<option value=" can"> can</option>
+				<option value=" must"> must</option>
+			</select>
+            </p>
+            <p>
+                <select onchange="return makeSentence()" name="word3">
+				<option selected value="">Select Word 3</option>
+				<option value=" eat."> eat.</option>
+				<option value=" study."> study.</option>
+				<option value=" play."> play.</option>
+			</select>
+            </p>
+        </form>
+
+    </body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Practice Question CS15-InClass2 </title>
+		<style type="text/css">
+			#add,
+			#sub,
+			#mul,
+			#div,
+			#clr {
+				width: 50px;
+				height: 30px;
+			}
+
+			form {
+				background-color: silver;
+				margin: 30px 200px 30px 200px;
+				padding: 40px 40px 40px 200px;
+			}
+
+			h1 {
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+        function add(){
+            var cal = document.getElementById("calculator");
+            x = cal.num1.value;
+            y = cal.num2.value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var results = x + y;
+            cal.result.value = z;
+
+        }
+          function sub(){
+            var cal = document.getElementById("calculator");
+            var x = cal.num1.value
+            var y = cal.num2.value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var z = x - y;
+            cal.result.value = z;
+
+        }
+          function mult(){
+            var cal = document.getElementById("calculator");
+            var x = cal.num1.value;
+            var y = cal.num2.value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var z = x * y;
+            cal.result.value = z;
+
+        }
+          function div(){
+            var cal = document.getElementById("calc");
+            var x = cal.num1.value;
+            var y = cal.num2.value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            var z = x / y;
+            cal.result.value = z;
+
+        }
+		</script>
+	</head>
+
+	<body>
+
+		<h1>The making of a small calculator </h1>
+		<form id="calc" action="">
+			<p>Your Result: <input name="result" size="10" type="text"></p>
+			<p>Number 1: <input name="num1" size="5" type="text"> Number 2: <input name="num2" size="5" type="text"></p>
+			<p>
+				<input value="ADD" type="button" onclick="add()">
+				<input value="SUB" type="button" onclick="sub()">
+				<input value="MULT" type="button" onclick="mult()">
+				<input value="DIV" type="button" onclick="div()"> <br><br>
+				<input id="clr" value="Clear" name="reset" type="reset">
+			</p>
+
+		</form>
+
+
+
+	</body>
+
+</html>

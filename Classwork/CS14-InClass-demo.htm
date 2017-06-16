@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+<meta charset="UTF-8">
+<title> Web Technologies </title>
+
+<script>
+    function ask(){
+      //*  var today = prompt("What day is it today?","");
+      //*  document.getElementById("userInput").innerHTML = today;
+     //   if (today == "Monday" || today == "monday"){
+      //      document.getElementById("result").innerHTML = "Correct!"
+     //   }
+     var x=prompt("What is your gender?","");
+                if (x.toLowerCase() =="male"||x.toLowerCase() =="Male"){
+                    alert("hello, sir!")
+                }
+                else if (x.toLowerCase() == "female"){
+                    alert("hello, madam!");
+                }
+                else {
+                    alert("Hello, Robot!");
+                }
+
+                alert ("how are you today?")
+            }
+
+
+
+
+    
+</script>
+
+        
+
+
+
+</head>
+
+<body>
+<h1> Conditional Statements demo</h1>
+      
+<button onclick ="ask()"> Click me!</button>
+
+        <p>
+            Input: <span id="userInput"></span>
+        </p>
+
+        <p>
+            Result:<span id="result"></span>
+        </p>
+</body>
+
+</html>

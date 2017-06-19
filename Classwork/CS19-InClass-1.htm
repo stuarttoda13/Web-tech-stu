@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Slide Show</title>
+        <style type="text/css">
+            p {
+                text-align: center;
+            }
+
+            img {
+                border-width: 10px;
+                border-style: solid;
+            }
+        </style>
+
+        <script type="text/javascript">
+        var slides = new Array("Images/Tiger.jpg","Images/tiger2.jpg","Images/tiger3.jpg","Images/tiger4.jpg");
+        var color = new Array("yellow", "blue", "green", "red")
+        var i = 0;
+
+        function slideShow(){
+            var tigerImage = document.getElementById("tiger");
+            if (i == slides.length){
+                i=0;
+            }
+
+            tigerImage.src = slides[i];
+            
+            tigerImage.style.borderColor = color[i];
+            i++;
+            setTimeout("slideShow()",1000);
+
+           
+
+        }
+        
+
+        </script>
+    </head>
+
+    <body onload = "slideShow()">
+        <p>
+            <img id = "tiger" src="Tiger.jpg" alt="Slide Show of Tigers" title="Tigers" width = "400px" height = "300px"/>
+        </p>
+    </body>
+
+</html>

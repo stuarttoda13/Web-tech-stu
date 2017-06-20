@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>JQuery Template File</title>
+        <style type="text/css">
+            /* The styles go here*/
+        </style>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#button1").click(function(){                
+                    $("h1").css("color","red");
+                    $("h2:first").css("color","blue");
+                    $("#button1").text("after clicking");
+                    //you can also use "this" instead of "#button1"
+                    $("img").hide();
+
+                });
+                $("#button2").click(function(){
+                    $("img").show();
+                });
+                $("#button3").click(function(){
+                    $("img").toggle();
+                    $("#button2").toggle();
+                })
+
+
+            })
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+<h1>Introduction to jQuery</h1>
+<h2>CSS with jQuery</h2>
+<h2>Another example for CSS with jQuery</h2>
+
+<button id="button1">Test</button>
+<button id="button2">Image Come Back </button>
+<button id="button3">Toggle</button>
+<p>
+<img src="Images/Tiger.jpg" alt = "tiger" title = "Tiger">
+</p>
+
+
+    </body>
+
+</html>

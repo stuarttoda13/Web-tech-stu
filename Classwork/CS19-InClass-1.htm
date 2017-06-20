@@ -16,20 +16,24 @@
 
         <script type="text/javascript">
         var slides = new Array("Images/Tiger.jpg","Images/tiger2.jpg","Images/tiger3.jpg","Images/tiger4.jpg");
-        var color = new Array("yellow", "blue", "green", "red")
+        var color = new Array("yellow", "blue", "green", "red");
+        var text = new Array("tiger walking","tiger side shot", "tiger casual shot", "more than 1 tiger");
+        var d = document.getElementById("description");
+       
         var i = 0;
 
         function slideShow(){
             var tigerImage = document.getElementById("tiger");
+            
             if (i == slides.length){
                 i=0;
             }
 
             tigerImage.src = slides[i];
-            
+            d.innerHTML = text[i];
             tigerImage.style.borderColor = color[i];
             i++;
-            setTimeout("slideShow()",1000);
+            setTimeout("slideShow()",1500);
 
            
 
@@ -43,6 +47,10 @@
         <p>
             <img id = "tiger" src="Tiger.jpg" alt="Slide Show of Tigers" title="Tigers" width = "400px" height = "300px"/>
         </p>
+
+<p id="description">    
+
+</p>
     </body>
 
 </html>

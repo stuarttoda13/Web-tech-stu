@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Question #3 - Fall 2014</title>
+
+    <style type="text/css">
+        h1,
+        h3 {
+            text-align: center;
+            font-family: Arial;
+            color: Navy;
+        }
+
+        h2 {
+            margin: 20px 150px 20px 150px;
+        }
+
+        form {
+            width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            border: solid black 2px;
+        }
+
+        p {
+            margin-right: 60px;
+            text-align: right;
+            font-size: 14pt;
+        }
+
+        button {
+            font-size: 12pt;
+            margin-top: 20px;
+        }
+
+        input {
+            margin: 0px;
+            text-align: right;
+        }
+
+        .ro {
+            background-color: #E0E0E0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function compute() {
+            var form1 = document.getElementById("form1");
+            var price = form1.price.value;
+            var q = form1.quantity.value;
+            var tax;
+
+            var total;
+
+            if (price == "" || q == "") {
+                alert("Fill in both quantity and price!")
+            }
+            else if (isNaN(price) || isNaN(q)) {
+                alert("Fill in numerical values!")
+            }
+
+            else if (form1.state.value == "MA") {
+                price = parseFloat(price);
+                q = parseFloat(q);
+                tax = price * q * 0.0625;
+
+                total = price * q + tax;
+
+
+            }
+
+
+            tax = tax.toFixed(2);
+            form1.tax.value = tax;
+
+            total = total.toFixed(2);
+            form1.total.value = total;
+
+
+
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Midterm Exam - Question 3 (30 points)</h1>
+    <hr />
+    <h2>Please create the following functionality using the form given below. When the user clicks the Compute button, a sales
+        tax is calculated based on the selected state and placed in the form where indicated. Also the total (price * quantity
+        + tax) is computed and placed in the form where indicated. If the price or the quantity is blank, an alert will pop
+        up telling the user to enter the information. If the price and the quantity is not a number, another alert will pop
+        up. The fractional part of tax and total should be fixed to two digits. </h2>
+    <hr />
+    <form id="form1" action="" method="post">
+        <h3> Tax Computation Form </h3>
+        <p> Price: <input type="text" name="price" maxlength="15" /></p>
+        <p> Quantity: <input name="quantity" type="text" maxlength="3" /></p>
+        <p> State:
+            <select id="3states" name="state">
+              <option value="MA">Massachusetts</option>
+              <option value="NH">New Hampshire</option>
+              <option value="CT">Connecticut</option>
+        </select>
+        </p>
+        <p>Tax: <input type="text" name="tax" maxlength="15" readonly="readonly" class="ro" /></p>
+        <p> =============</p>
+        <p>Total: <input name="total" type="text" maxlength="15" readonly="readonly" class="ro" /></p>
+        <p style="text-align:center; margin-right:0px">
+            <button onclick="return compute()">Compute</button>
+            <input type="reset" name="reset" value="Clear" />
+        </p>
+    </form>
+</body>
+
+</html>

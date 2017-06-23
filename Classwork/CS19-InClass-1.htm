@@ -18,13 +18,13 @@
         var slides = new Array("Images/Tiger.jpg","Images/tiger2.jpg","Images/tiger3.jpg","Images/tiger4.jpg");
         var color = new Array("yellow", "blue", "green", "red");
         var text = new Array("tiger walking","tiger side shot", "tiger casual shot", "more than 1 tiger");
-        var d = document.getElementById("description");
+        
        
         var i = 0;
 
         function slideShow(){
             var tigerImage = document.getElementById("tiger");
-            
+            var d = document.getElementById("description");
             if (i == slides.length){
                 i=0;
             }

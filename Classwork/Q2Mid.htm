@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title></title>
+        <style type="text/css">
+            table {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            img {
+                width: 70%;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial;
+                color: Navy;
+            }
+            p {
+                margin-left: 300px;
+                margin-right: 300px;
+                font-size: 14pt;
+            }
+
+        </style>
+        
+        <script type="text/javascript">
+
+            function Happy(){
+                
+                var happy = document.getElementById("happyTxt");
+                
+                var sad = document.getElementById("sadTxt");
+                happy.style.color = "red";
+                happy.style.fontFamily = "lucida handwriting";
+                happy.style.fontSize = "2em";
+                happy.style.backgroundColor = "yellow";
+                sad.innerHTML="";
+                happy.innerHTML="Web Tech Rocks!";
+         
+                
+                    }
+
+            function sad(){
+                var sad = document.getElementById("sadTxt");
+                
+                var happy = document.getElementById("happyTxt");
+                sad.style.color = "green";
+                sad.style.fontSize = "2em";
+                sad.style.fontFamily = "arial";
+                sad.style.textDecoration = "bold";
+                happy.innerHTML = "";
+                sad.innerHTML = "Web Tech Sucks!";
+                happy.style.backgroundColor = "white";
+            }
+            </script>
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Reflect the Image (20 points)</h1>
+        
+        <p> 
+            There are two images shown below along with two text strings. Create the functionality whereby if you click on the Smiley.jpg image, 
+            the text string "Web Tech Rocks" is shown in red font, size 2em, using Lucida Handwriting with a yellow background. If you click on 
+            frown.jpg image, the string "Web Tech Sucks" is shown in green font, bold, size 2em, and using Arial. When one text string is shown, 
+            the other should not be displayed. Use as many functions as you see necessary to complete this functionality.
+        </p>
+
+        <table>
+            <tr>
+                <td><img src="Images/smiley.jpg" alt="Smiling Face" title="Smile" id="happy" onclick="Happy()"></td>
+                <td id="happyTxt">Web Tech Rocks!</td>
+            </tr>
+            <tr>
+                <td><img src="Images/frown.jpg" alt="Frown Face" title="Sad" onclick="sad()"></td>
+                <td id="sadTxt">Web Tech Sucks!</td>
+            </tr>
+
+        </table>
+    </body>
+</html>
